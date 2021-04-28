@@ -9,6 +9,29 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Popup Grid.Column="0" Grid.Row="0" IsHitTestVisible="False" IsOpen="True">
+            <Grid x:Name="gazeTrace">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Ellipse
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Row="0" 
+                    Grid.Column="0"
+                    Width="100"
+                    Height="100"
+                    Fill="WhiteSmoke"
+                    Opacity="0.3">
+                </Ellipse>
+                <Grid.RenderTransform>
+                    <TranslateTransform x:Name="_gazeMarkerTransform" X="0" Y="0"/>
+                </Grid.RenderTransform>
+            </Grid>
+        </Popup>
 
     </Grid>
 </Page>
